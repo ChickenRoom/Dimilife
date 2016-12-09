@@ -2,22 +2,12 @@ package chickens.org.dimilife.Fragment;
 
 import android.content.Context;
 import android.net.Uri;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.TextView;
-
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
-import org.jsoup.nodes.Element;
-import org.jsoup.select.Elements;
-
-import java.io.IOException;
-import java.util.List;
 
 import chickens.org.dimilife.HTTPConnection.Food;
 import chickens.org.dimilife.HTTPConnection.FoodService;
@@ -86,16 +76,6 @@ public class FirstFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_first, container, false);
-        textView = (TextView) view.findViewById(R.id.textview1);
-        Button button = (Button)view.findViewById(R.id.button1);
-
-
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                getFood();
-            }
-        });
 
         return view;
     }
