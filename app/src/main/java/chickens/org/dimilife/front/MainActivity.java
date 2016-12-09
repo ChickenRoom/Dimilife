@@ -14,17 +14,23 @@ import me.relex.circleindicator.CircleIndicator;
 
 public class MainActivity extends AppCompatActivity implements FirstFragment.OnFragmentInteractionListener,SecondFragment.OnFragmentInteractionListener,ThirdFragment.OnFragmentInteractionListener {
 
+    chickens.org.dimilife.front.SetResourceEffect setResourceEffect;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        setResourceEffect = new chickens.org.dimilife.front.SetResourceEffect();
+
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
 
+
+
         ViewPager viewPager = (ViewPager)findViewById(R.id.viewpager_default);
         CircleIndicator indicator = (CircleIndicator)findViewById(R.id.indicator_default);
-        PagerAdapter adapter = new PagerAdapter(getSupportFragmentManager());
+        chickens.org.dimilife.front.PagerAdapter adapter = new chickens.org.dimilife.front.PagerAdapter(getSupportFragmentManager());
         viewPager.setAdapter(adapter);
         indicator.setViewPager(viewPager);
         adapter.registerDataSetObserver(indicator.getDataSetObserver());

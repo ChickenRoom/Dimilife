@@ -5,18 +5,7 @@
     tools:context="chickens.org.dimilife.Fragment.FirstFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment"
-        android:id="@+id/textview1"/>
 
-    <Button
-        android:text="Button"
-        android:layout_width="235dp"
-        android:layout_height="wrap_content"
-        android:id="@+id/button1"
-        android:layout_marginStart="100dp"/>
 
 
 </FrameLayout>

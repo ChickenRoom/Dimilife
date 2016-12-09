@@ -14,27 +14,28 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
-        android:text="id"
+        android:hint="id"
         android:ems="10"
         android:layout_centerHorizontal="true"
-        android:id="@+id/editText" />
+        android:id="@+id/id_edit" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPassword"
+        android:hint="pw"
         android:ems="10"
-        android:layout_below="@+id/editText"
-        android:layout_alignStart="@+id/editText"
+        android:layout_below="@+id/id_edit"
+        android:layout_alignStart="@+id/id_edit"
         android:layout_marginTop="82dp"
-        android:id="@+id/editText2" />
+        android:id="@+id/pw_edit" />
 
     <Button
         android:text="Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/editText2"
-        android:layout_alignEnd="@+id/editText2"
+        android:layout_below="@+id/pw_edit"
+        android:layout_alignEnd="@+id/pw_edit"
         android:layout_marginEnd="49dp"
         android:layout_marginTop="87dp"
         android:id="@+id/button" />

@@ -3,7 +3,6 @@ package chickens.org.dimilife;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -19,7 +18,7 @@ import chickens.org.dimilife.HTTPConnection.SnackService;
 import chickens.org.dimilife.HTTPConnection.Stay;
 import chickens.org.dimilife.HTTPConnection.StayService;
 import chickens.org.dimilife.HTTPConnection.User;
-import chickens.org.dimilife.front.MainActivity;
+import chickens.org.dimilife.Front.MainActivity;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -38,8 +37,8 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        id = (EditText)findViewById(R.id.editText);
-        pw = (EditText)findViewById(R.id.editText2);
+        id = (EditText)findViewById(R.id.id_edit);
+        pw = (EditText)findViewById(R.id.pw_edit);
         button = (Button)findViewById(R.id.button);
         textView = (TextView) findViewById(R.id.textView);
         textView2 = (TextView) findViewById(R.id.textView2);
