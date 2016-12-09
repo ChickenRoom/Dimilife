@@ -31,9 +31,9 @@
             app:ci_animator="@anim/indicator_animator"
             app:ci_animator_reverse="@anim/indicator_animator_reverse"
             app:ci_drawable="@drawable/white_radius"
-            app:ci_height="4dp"
+            app:ci_height="30dp"
             app:ci_margin="6dp"
-            app:ci_width="10dp"/>
+            app:ci_width="30dp"/>
     </RelativeLayout>
 
 
