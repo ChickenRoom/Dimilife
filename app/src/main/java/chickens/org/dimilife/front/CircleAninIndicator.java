@@ -1,4 +1,4 @@
-package chickens.org.dimilife;
+package chickens.org.dimilife.front;
 
 import android.content.Context;
 import android.util.AttributeSet;

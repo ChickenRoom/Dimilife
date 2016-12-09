@@ -1,13 +1,10 @@
-package chickens.org.dimilife;
+package chickens.org.dimilife.front;
 
-<<<<<<< HEAD
-=======
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
->>>>>>> origin/master
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
+
+import chickens.org.dimilife.R;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -15,18 +12,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-<<<<<<< HEAD
 
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
 
 
-
-
-
-
-=======
-        
->>>>>>> origin/master
     }
 }
