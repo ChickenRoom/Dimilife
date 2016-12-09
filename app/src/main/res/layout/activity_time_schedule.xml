@@ -8,12 +8,22 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="90dp"
-        android:background="#F75567">
+        android:layout_height="93.78dp"
+        android:background="#F75567"
+        android:id="@+id/line">
+
+        <ImageView
+            android:layout_width="20.5dp"
+            android:layout_height="20.5dp"
+            android:layout_marginStart="37.5dp"
+            android:layout_marginTop="31dp"
+            android:background="@drawable/ic_arrow_back_black_24dp"
+            android:id="@+id/arrow"/>
         <chickens.org.dimilife.Widget.NotoBoldTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="27.5dp"
+            android:layout_marginStart="76.5dp"
             android:text="@string/checktime"
             android:letterSpacing="-0.05"
             android:textSize="20sp"

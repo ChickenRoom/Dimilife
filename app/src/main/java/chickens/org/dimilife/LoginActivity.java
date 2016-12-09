@@ -18,7 +18,7 @@ import chickens.org.dimilife.HTTPConnection.SnackService;
 import chickens.org.dimilife.HTTPConnection.Stay;
 import chickens.org.dimilife.HTTPConnection.StayService;
 import chickens.org.dimilife.HTTPConnection.User;
-import chickens.org.dimilife.Front.MainActivity;
+import chickens.org.dimilife.front.MainActivity;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;

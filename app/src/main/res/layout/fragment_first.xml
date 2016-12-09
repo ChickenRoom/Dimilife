@@ -5,7 +5,62 @@
     tools:context="chickens.org.dimilife.Fragment.FirstFragment">
 
     <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:layout_gravity="right"
+        android:gravity="right|center_vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="asdf"/>
+        <chickens.org.dimilife.Widget.NotoBoldButton
+            android:id="@+id/day_tab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_event_note_black_24dp"
+            android:text="일간"
+            android:textColor="@color/buttonUnSelected"
+            android:background="?android:attr/selectableItemBackground"
+            android:layout_marginRight="33dp"
+            android:onClick="onClick"
+            />
+        <chickens.org.dimilife.Widget.NotoBoldButton
+            android:id="@+id/week_tab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_event_note_black_24dp"
+            android:text="주간"
+            android:textColor="@color/buttonUnSelected"
+            android:background="?android:attr/selectableItemBackground"
+            android:layout_marginRight="33dp"
+            android:onClick="onClick"
+            />
+        <chickens.org.dimilife.Widget.NotoBoldButton
+            android:id="@+id/month_tab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_event_note_black_24dp"
+            android:text="전체"
+            android:textColor="@color/buttonUnSelected"
+            android:background="?android:attr/selectableItemBackground"
+            android:layout_marginRight="33dp"
+            />
+        <chickens.org.dimilife.Widget.NotoBoldButton
+            android:id="@+id/borrow_tab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_event_note_black_24dp"
+            android:text="빌리기"
+            android:textColor="@color/buttonUnSelected"
+            android:background="?android:attr/selectableItemBackground"
+            android:layout_marginRight="33dp"
+            />
 
+
+
+    </LinearLayout>
 
 
 </FrameLayout>
