@@ -1,18 +1,21 @@
 package chickens.org.dimilife.front;
 
-import android.content.Context;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentStatePagerAdapter;
+import android.support.v4.app.FragmentPagerAdapter;
+
+import chickens.org.dimilife.Fragment.FirstFragment;
+import chickens.org.dimilife.Fragment.SecondFragment;
+import chickens.org.dimilife.Fragment.ThirdFragment;
 
 /**
  * Created by songhyemin on 2016. 12. 9..
  */
 
-public class PagerAdapter extends FragmentStatePagerAdapter {
+public class PagerAdapter extends FragmentPagerAdapter {
 
-    Context context;
-
+    private int MAX_PAGE=3;
+    private Fragment cur_fragment=new Fragment();
 
     public PagerAdapter(FragmentManager fm) {
         super(fm);
@@ -20,11 +23,23 @@ public class PagerAdapter extends FragmentStatePagerAdapter {
 
     @Override
     public Fragment getItem(int position) {
-        return null;
+        if(position<0 || MAX_PAGE<=position)
+            return null;
+        switch (position){
+            case 0:
+                cur_fragment=new FirstFragment();
+                break;
+            case 1:
+                cur_fragment=new SecondFragment();
+                break;
+            case 2:
+                cur_fragment=new ThirdFragment();
+                break;
+        }
+        return cur_fragment;
     }
-
     @Override
     public int getCount() {
-        return 0;
+        return MAX_PAGE;
     }
 }
