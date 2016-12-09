@@ -1,4 +1,4 @@
-package chickens.org.dimilife.front;
+package chickens.org.dimilife.Front;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;

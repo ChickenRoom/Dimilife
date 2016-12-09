@@ -1,4 +1,4 @@
-package chickens.org.dimilife.front;
+package chickens.org.dimilife.Front;
 
 import android.net.Uri;
 import android.os.Bundle;
@@ -14,13 +14,19 @@ import me.relex.circleindicator.CircleIndicator;
 
 public class MainActivity extends AppCompatActivity implements FirstFragment.OnFragmentInteractionListener,SecondFragment.OnFragmentInteractionListener,ThirdFragment.OnFragmentInteractionListener {
 
+    SetResourceEffect setResourceEffect;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        setResourceEffect = new SetResourceEffect();
+
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
+
+
 
         ViewPager viewPager = (ViewPager)findViewById(R.id.viewpager_default);
         CircleIndicator indicator = (CircleIndicator)findViewById(R.id.indicator_default);
