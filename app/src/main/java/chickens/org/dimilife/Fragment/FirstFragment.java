@@ -4,6 +4,7 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +13,7 @@ import android.widget.TextView;
 import chickens.org.dimilife.HTTPConnection.Food;
 import chickens.org.dimilife.HTTPConnection.FoodService;
 import chickens.org.dimilife.R;
+import chickens.org.dimilife.front.InsidePagerAdapter;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -76,7 +78,9 @@ public class FirstFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_first, container, false);
-
+        ViewPager viewPager = (ViewPager) view.findViewById(R.id.inside_viewpager_default);
+        InsidePagerAdapter adapter = new InsidePagerAdapter(getFragmentManager());
+        viewPager.setAdapter(adapter);
 
         return view;
     }
