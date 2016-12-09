@@ -23,7 +23,6 @@
             android:text="일간"
             android:textColor="@color/buttonUnSelected"
             android:background="?android:attr/selectableItemBackground"
-            android:layout_marginRight="33dp"
             android:onClick="onClick"
             />
         <chickens.org.dimilife.Widget.NotoBoldButton
@@ -34,7 +33,6 @@
             android:text="주간"
             android:textColor="@color/buttonUnSelected"
             android:background="?android:attr/selectableItemBackground"
-            android:layout_marginRight="33dp"
             android:onClick="onClick"
             />
         <chickens.org.dimilife.Widget.NotoBoldButton
@@ -45,7 +43,6 @@
             android:text="전체"
             android:textColor="@color/buttonUnSelected"
             android:background="?android:attr/selectableItemBackground"
-            android:layout_marginRight="33dp"
             />
         <chickens.org.dimilife.Widget.NotoBoldButton
             android:id="@+id/borrow_tab"
@@ -55,7 +52,6 @@
             android:text="빌리기"
             android:textColor="@color/buttonUnSelected"
             android:background="?android:attr/selectableItemBackground"
-            android:layout_marginRight="33dp"
             />
 
 
