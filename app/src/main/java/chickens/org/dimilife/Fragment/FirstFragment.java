@@ -2,13 +2,31 @@ package chickens.org.dimilife.Fragment;
 
 import android.content.Context;
 import android.net.Uri;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.TextView;
 
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
+
+import java.io.IOException;
+import java.util.List;
+
+import chickens.org.dimilife.HTTPConnection.Food;
+import chickens.org.dimilife.HTTPConnection.FoodService;
 import chickens.org.dimilife.R;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -27,6 +45,8 @@ public class FirstFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+
+    private TextView textView;
 
     private OnFragmentInteractionListener mListener;
 
@@ -66,6 +86,17 @@ public class FirstFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_first, container, false);
+        textView = (TextView) view.findViewById(R.id.textview1);
+        Button button = (Button)view.findViewById(R.id.button1);
+
+
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getFood();
+            }
+        });
+
         return view;
     }
 
@@ -106,5 +137,28 @@ public class FirstFragment extends Fragment {
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
+    }
+
+    private void getFood() {
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl("http://dimigo.in/")
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+
+        final FoodService getFood = retrofit.create(FoodService.class);
+
+        Call<Food> call = getFood.getFood();
+
+        call.enqueue(new Callback<Food>() {
+            @Override
+            public void onResponse(Call<Food> call, Response<Food> response) {
+                textView.setText(response.body().getBreakfast());
+            }
+
+            @Override
+            public void onFailure(Call<Food> call, Throwable t) {
+
+            }
+        });
     }
 }
