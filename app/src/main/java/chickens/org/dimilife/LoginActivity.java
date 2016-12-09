@@ -1,11 +1,16 @@
 package chickens.org.dimilife;
 
 import android.content.Intent;
+import android.graphics.BitmapFactory;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -26,8 +31,6 @@ import retrofit2.Response;
 public class LoginActivity extends AppCompatActivity {
 
     private EditText id,pw;
-    private Button button;
-    private TextView textView,textView2;
     private String name;
     private ArrayList<String> stayList = new ArrayList<String>();
     private ArrayList<String> snackList = new ArrayList<String>();
@@ -37,18 +40,16 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.hide();
+
         id = (EditText)findViewById(R.id.id_edit);
         pw = (EditText)findViewById(R.id.pw_edit);
-        button = (Button)findViewById(R.id.button);
-        textView = (TextView) findViewById(R.id.textView);
-        textView2 = (TextView) findViewById(R.id.textView2);
 
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                doLogin(id.getText().toString(),pw.getText().toString());
-            }
-        });
+        LinearLayout layout = (LinearLayout)findViewById(R.id.activity_login);
+
+        layout.setBackgroundDrawable(new BitmapDrawable(getResources(), BitmapFactory.decodeResource(getResources(), R.drawable.back)));
+
 
 
 
@@ -83,10 +84,10 @@ public class LoginActivity extends AppCompatActivity {
                     stayList.add(response.body().get(i).getName());
                 }
                 if(stayList.contains(name)) {
-                    textView.setText("너 잔류");
+
                 }
                 else {
-                    textView.setText("너 잔류 아니양");
+
                 }
             }
 
@@ -107,10 +108,10 @@ public class LoginActivity extends AppCompatActivity {
                     snackList.add(response.body().get(i).getName());
                 }
                 if(snackList.contains(name)) {
-                    textView2.setText("너 간식");
+
                 }
                 else {
-                    textView2.setText("너 간식 아니양");
+
                 }
             }
 
@@ -119,5 +120,21 @@ public class LoginActivity extends AppCompatActivity {
 
             }
         });
+    }
+
+    @Override
+    public void onDestroy() {
+        recycleView(findViewById(R.id.activity_login));
+    }
+
+    private void recycleView(View view) {
+        if(view != null) {
+            Drawable bg = view.getBackground();
+            if(bg != null) {
+                bg.setCallback(null);
+                ((BitmapDrawable)bg).getBitmap().recycle();
+                view.setBackgroundDrawable(null);
+            }
+        }
     }
 }

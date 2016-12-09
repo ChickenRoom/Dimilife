@@ -6,4 +6,5 @@
     <color name="indicatorSelected">#f75567</color>
     <color name="buttonSelected">#f75567</color>
     <color name="buttonUnSelected">#d4d2d2</color>
+    <color name="white">#FFFFFF</color>
 </resources>
