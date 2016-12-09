@@ -13,6 +13,8 @@ import java.util.List;
 
 import chickens.org.dimilife.HTTPConnection.LoginService;
 import chickens.org.dimilife.HTTPConnection.ServiceGenerator;
+import chickens.org.dimilife.HTTPConnection.Snack;
+import chickens.org.dimilife.HTTPConnection.SnackService;
 import chickens.org.dimilife.HTTPConnection.Stay;
 import chickens.org.dimilife.HTTPConnection.StayService;
 import chickens.org.dimilife.HTTPConnection.User;
@@ -24,9 +26,10 @@ public class LoginActivity extends AppCompatActivity {
 
     private EditText id,pw;
     private Button button;
-    private TextView textView;
+    private TextView textView,textView2;
     private String name;
     private ArrayList<String> stayList = new ArrayList<String>();
+    private ArrayList<String> snackList = new ArrayList<String>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +40,7 @@ public class LoginActivity extends AppCompatActivity {
         pw = (EditText)findViewById(R.id.editText2);
         button = (Button)findViewById(R.id.button);
         textView = (TextView) findViewById(R.id.textView);
+        textView2 = (TextView) findViewById(R.id.textView2);
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -57,6 +61,7 @@ public class LoginActivity extends AppCompatActivity {
             public void onResponse(Call<User> call, Response<User> response) {
                 name = response.body().getName();
                 getStay("2016-06-18");
+                getSnack(2016,5);
             }
 
             @Override
@@ -85,6 +90,30 @@ public class LoginActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<List<Stay>> call, Throwable t) {
+
+            }
+        });
+    }
+
+    private void getSnack(int year, int month) {
+        final SnackService snackService = ServiceGenerator.createService(SnackService.class,"enoxaiming","hkwoo3");
+        Call<List<Snack>> call = snackService.getSnack(year,month);
+        call.enqueue(new Callback<List<Snack>>() {
+            @Override
+            public void onResponse(Call<List<Snack>> call, Response<List<Snack>> response) {
+                for(int i = 0; i < response.body().size(); i++) {
+                    snackList.add(response.body().get(i).getName());
+                }
+                if(snackList.contains(name)) {
+                    textView2.setText("너 간식");
+                }
+                else {
+                    textView2.setText("너 간식 아니양");
+                }
+            }
+
+            @Override
+            public void onFailure(Call<List<Snack>> call, Throwable t) {
 
             }
         });
