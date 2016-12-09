@@ -30,101 +30,112 @@
             android:textColor="#FFFFFF"/>
     </RelativeLayout>
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/line"
-        android:layout_marginTop="40.72dp"
-        android:layout_marginStart="52.5dp">
-
-        <ImageView
-            android:layout_marginTop="2dp"
-            android:layout_width="20.0dp"
-            android:layout_height="20.0dp"
-            android:background="@drawable/ic_search_black_24dp"/>
-
-        <chickens.org.dimilife.Widget.NotoBoldTextView
-            android:layout_width="wrap_content"
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/line">
+        <RelativeLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="17.0sp"
-            android:letterSpacing="-0.05"
-            android:lineSpacingExtra="14sp"
-            android:text="@string/전교생_시간표_조회"
-            android:layout_marginStart="25dp"
-            android:id="@+id/text1"
-            android:textColor="#F75567"/>
+            android:layout_marginTop="40.72dp"
+            android:layout_marginStart="52.5dp">
 
-        <Spinner
-            android:layout_below="@+id/text1"
-            android:layout_marginTop="25dp"
-            android:id="@+id/planets_spinner"
-            android:layout_width="120dp"
-            android:layout_height="40dp"
-            android:spinnerMode="dropdown" />
+            <ImageView
+                android:layout_marginTop="2dp"
+                android:layout_width="20.0dp"
+                android:layout_height="20.0dp"
+                android:background="@drawable/ic_search_black_24dp"/>
 
-        <chickens.org.dimilife.Widget.NotoRegularTextView
-            android:layout_below="@+id/text1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:textSize="20sp"
-            android:text="학년"
-            android:textColor="#757575"
-            android:id="@+id/text2"
-            android:layout_toEndOf="@id/planets_spinner"
-            android:layout_marginStart="12.5dp"/>
+            <chickens.org.dimilife.Widget.NotoBoldTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="17.0sp"
+                android:letterSpacing="-0.05"
+                android:lineSpacingExtra="14sp"
+                android:text="@string/전교생_시간표_조회"
+                android:layout_marginStart="25dp"
+                android:id="@+id/text1"
+                android:textColor="#F75567"/>
 
-        <Spinner
-            android:layout_below="@+id/text1"
-            android:layout_marginTop="25dp"
-            android:id="@+id/planets_spinner2"
-            android:layout_width="120dp"
-            android:layout_height="40dp"
-            android:spinnerMode="dropdown"
-            android:layout_toEndOf="@+id/text2"
-            android:layout_marginStart="38dp"/>
+            <Spinner
+                android:layout_below="@+id/text1"
+                android:layout_marginTop="25dp"
+                android:id="@+id/planets_spinner"
+                android:layout_width="120dp"
+                android:layout_height="40dp"
+                android:spinnerMode="dropdown" />
 
-        <chickens.org.dimilife.Widget.NotoRegularTextView
-            android:layout_below="@+id/text1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:textSize="20sp"
-            android:text="반"
-            android:textColor="#757575"
-            android:layout_toEndOf="@id/planets_spinner2"
-            android:layout_marginStart="12.5dp"/>
+            <chickens.org.dimilife.Widget.NotoRegularTextView
+                android:layout_below="@+id/text1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:textSize="20sp"
+                android:text="학년"
+                android:textColor="#757575"
+                android:id="@+id/text2"
+                android:layout_toEndOf="@id/planets_spinner"
+                android:layout_marginStart="12.5dp"/>
 
-        <chickens.org.dimilife.Widget.NotoBoldButton
-            android:layout_width="220dp"
-            android:layout_height="40dp"
-            android:layout_below="@+id/text1"
-            android:layout_marginTop="25dp"
-            android:layout_marginStart="420dp"
-            android:background="@drawable/btn_bg"
-            android:text="시간표 조회하기"
-            android:textColor="#FFFFFF"
-            android:gravity="center_vertical"
-            android:textAlignment="center"
-            android:textSize="20.0sp"
-            android:drawableStart="@drawable/searchs"/>
+            <Spinner
+                android:layout_below="@+id/text1"
+                android:layout_marginTop="25dp"
+                android:id="@+id/planets_spinner2"
+                android:layout_width="120dp"
+                android:layout_height="40dp"
+                android:spinnerMode="dropdown"
+                android:layout_toEndOf="@+id/text2"
+                android:layout_marginStart="38dp"/>
 
-        <ImageView
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:layout_marginTop="193.72dp"
-            android:background="@drawable/note"
-            android:id="@+id/image2"/>
+            <chickens.org.dimilife.Widget.NotoRegularTextView
+                android:layout_below="@+id/text1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:textSize="20sp"
+                android:text="반"
+                android:textColor="#757575"
+                android:layout_toEndOf="@id/planets_spinner2"
+                android:layout_marginStart="12.5dp"/>
 
-        <chickens.org.dimilife.Widget.NotoBoldTextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="17.0sp"
-            android:letterSpacing="-0.05"
-            android:lineSpacingExtra="14sp"
-            android:text="일간 시간표"
-            android:layout_marginStart="25dp"
-            android:textColor="#F75567"/>
+            <chickens.org.dimilife.Widget.NotoBoldButton
+                android:layout_width="220dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/text1"
+                android:layout_marginTop="25dp"
+                android:layout_marginStart="420dp"
+                android:background="@drawable/btn_bg"
+                android:text="시간표 조회하기"
+                android:textColor="#FFFFFF"
+                android:gravity="center_vertical"
+                android:textAlignment="center"
+                android:textSize="20.0sp"
+                android:drawableStart="@drawable/searchs"/>
 
-    </RelativeLayout>
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="193.72dp"
+                android:background="@drawable/note"
+                android:id="@+id/image2"/>
+
+            <chickens.org.dimilife.Widget.NotoBoldTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="17.0sp"
+                android:letterSpacing="-0.05"
+                android:lineSpacingExtra="14sp"
+                android:text="일간 시간표"
+                android:layout_marginTop="192.6dp"
+                android:layout_marginStart="25dp"
+                android:textColor="#F75567"/>
+
+
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+
 </RelativeLayout>
