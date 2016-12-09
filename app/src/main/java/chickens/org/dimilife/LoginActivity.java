@@ -31,6 +31,7 @@ import retrofit2.Response;
 public class LoginActivity extends AppCompatActivity {
 
     private EditText id,pw;
+    private Button button;
     private String name;
     private ArrayList<String> stayList = new ArrayList<String>();
     private ArrayList<String> snackList = new ArrayList<String>();
@@ -50,6 +51,13 @@ public class LoginActivity extends AppCompatActivity {
 
         layout.setBackgroundDrawable(new BitmapDrawable(getResources(), BitmapFactory.decodeResource(getResources(), R.drawable.back)));
 
+        button = (Button)findViewById(R.id.login);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                doLogin(id.getText().toString(),pw.getText().toString());
+            }
+        });
 
 
 
@@ -65,6 +73,7 @@ public class LoginActivity extends AppCompatActivity {
                 getStay("2016-06-18");
                 getSnack(2016,5);
                 startActivity(new Intent(LoginActivity.this, MainActivity.class));
+                finish();
             }
 
             @Override
@@ -124,6 +133,7 @@ public class LoginActivity extends AppCompatActivity {
 
     @Override
     public void onDestroy() {
+        super.onDestroy();
         recycleView(findViewById(R.id.activity_login));
     }
 

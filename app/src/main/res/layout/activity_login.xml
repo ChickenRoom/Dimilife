@@ -7,6 +7,7 @@
     android:orientation="vertical"
     tools:context="chickens.org.dimilife.LoginActivity">
 
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -46,6 +47,7 @@
             android:inputType="textPersonName"
             android:hint="  ID"
             android:ems="10"
+            android:padding="10dp"
             android:id="@+id/id_edit"
             android:background="@color/white"/>
 
@@ -57,6 +59,7 @@
             android:inputType="textPassword"
             android:hint=" Password"
             android:ems="10"
+            android:padding="10dp"
             android:id="@+id/pw_edit"
             android:background="@color/white"/>
 
@@ -80,9 +83,12 @@
             android:background="@drawable/buttons"
             android:text="로그인"
             android:layout_marginStart="195.0dp"
-            android:textColor="@color/white"/>
+            android:textColor="@color/white"
+            android:id="@+id/login"/>
 
     </RelativeLayout>
+
+
 
 
 
