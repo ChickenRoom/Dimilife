@@ -12,14 +12,17 @@ import chickens.org.dimilife.Fragment.ThirdFragment;
  * Created by songhyemin on 2016. 12. 9..
  */
 
+
 public class PagerAdapter extends FragmentPagerAdapter {
 
-    private int MAX_PAGE=3;
-    private Fragment cur_fragment=new Fragment();
+    private int MAX_PAGE = 3;
+    private Fragment cur_fragment = new Fragment();
+
 
     public PagerAdapter(FragmentManager fm) {
         super(fm);
     }
+
 
     @Override
     public Fragment getItem(int position) {
