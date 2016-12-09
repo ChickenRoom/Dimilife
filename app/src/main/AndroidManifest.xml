@@ -12,14 +12,25 @@
         android:theme="@style/AppTheme">
 
         <activity android:name=".LoginActivity">
+<<<<<<< Updated upstream
+=======
+
+        </activity>
+        <activity android:name=".front.MainActivity">
+>>>>>>> Stashed changes
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+<<<<<<< Updated upstream
         <activity android:name=".front.MainActivity" />
         <activity android:name=".front.TimeScheduleActivity">
+=======
+        <activity android:name=".front.TimeScheduleActivity">
+
+>>>>>>> Stashed changes
         </activity>
     </application>
 

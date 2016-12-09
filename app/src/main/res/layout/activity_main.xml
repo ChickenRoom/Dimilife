@@ -42,7 +42,7 @@
         <me.relex.circleindicator.CircleIndicator
             android:id="@+id/indicator_default"
             android:layout_width="match_parent"
-            android:layout_height="33.62dp"
+            android:layout_height="43.62dp"
             android:layout_centerInParent="true"
             app:ci_animator="@anim/indicator_animator"
             app:ci_animator_reverse="@anim/indicator_animator_reverse"
@@ -50,8 +50,10 @@
             app:ci_height="10dp"
             app:ci_width="10dp"
             app:ci_margin="8.98dp"
-            app:ci_gravity="right|bottom"
-            android:paddingRight="33dp"
+            app:ci_gravity="right"
+            android:paddingTop="23.62dp"
+            android:paddingBottom="10dp"
+            android:paddingRight="23.96dp"
             />
 
         <android.support.v4.view.ViewPager
