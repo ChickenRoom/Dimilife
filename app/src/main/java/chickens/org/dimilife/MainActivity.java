@@ -1,8 +1,6 @@
 package chickens.org.dimilife;
 
 import android.os.Bundle;
-import android.support.design.widget.TabLayout;
-import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 
@@ -17,9 +15,6 @@ public class MainActivity extends AppCompatActivity {
         actionBar.hide();
 
 
-        ViewPager mImageViewPager = (ViewPager) findViewById(R.id.pager);
-        TabLayout tabLayout = (TabLayout) findViewById(R.id.tabDots);
-        tabLayout.setupWithViewPager(mImageViewPager);
 
 
 

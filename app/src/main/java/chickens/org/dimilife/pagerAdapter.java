@@ -1,32 +1,30 @@
 package chickens.org.dimilife;
 
+import android.content.Context;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
-
-import java.util.List;
+import android.support.v4.app.FragmentStatePagerAdapter;
 
 /**
  * Created by songhyemin on 2016. 12. 9..
  */
 
-public class PagerAdapter extends FragmentPagerAdapter {
+public class PagerAdapter extends FragmentStatePagerAdapter {
 
-    private List<Fragment> listFragments;
+    Context context;
 
-    public PagerAdapter(FragmentManager fm, List<Fragment>listFragments) {
+
+    public PagerAdapter(FragmentManager fm) {
         super(fm);
-        this.listFragments = listFragments;
-
     }
 
     @Override
     public Fragment getItem(int position) {
-        return listFragments.get(position);
+        return null;
     }
 
     @Override
     public int getCount() {
-        return listFragments.size();
+        return 0;
     }
 }
