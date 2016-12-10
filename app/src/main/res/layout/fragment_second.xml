@@ -4,6 +4,20 @@
     android:layout_height="match_parent"
     tools:context="chickens.org.dimilife.Fragment.SecondFragment">
 
-    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="543.44dp">
+
+        <chickens.org.dimilife.Widget.NotoRegularTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="@string/breakfast"
+            android:textSize="20dp"
+            />
+
+
+    </LinearLayout>
+
 
 </FrameLayout>
