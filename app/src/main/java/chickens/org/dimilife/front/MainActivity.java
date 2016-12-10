@@ -1,7 +1,9 @@
 package chickens.org.dimilife.front;
 
+import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBar;
@@ -30,6 +32,9 @@ public class MainActivity extends AppCompatActivity implements FirstFragment.OnF
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
 
+        if (Build.VERSION.SDK_INT >= 21) {   //상태바 색
+            getWindow().setStatusBarColor(Color.parseColor("#000000"));
+        }
 
 
         ViewPager viewPager = (ViewPager)findViewById(R.id.viewpager_default);
