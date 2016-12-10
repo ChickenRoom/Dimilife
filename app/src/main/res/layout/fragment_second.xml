@@ -18,6 +18,7 @@
             android:textSize="25dp"
             android:gravity="center"
             android:textColor="#757575"
+            android:background="#FAFAFA"
             />
 
         <ImageView

@@ -93,6 +93,8 @@ public class TimeScheduleActivity extends AppCompatActivity {
 
     }
 
+
+
     private String[] getSingleClasses(String serials) {
         //String serials = String.valueOf(serial);
         ScheduleManage schedule = ScheduleManage.getInstance();
@@ -216,21 +218,21 @@ public class TimeScheduleActivity extends AppCompatActivity {
         if(gradeSpinner.getSelectedItem().toString().equals("1")) {
             for(int i = 0; i < 7; i++) {
                 switch (timeline[i]) {
-                    case("역사") : teachers[i] = "박경수T"; break;
-                    case("기제") : teachers[i] = "김상현T"; break;
-                    case("사회") : teachers[i] = "이민주T"; break;
-                    case("체육") : teachers[i] = "김성렬T"; break;
-                    case("수2") : teachers[i] = "김세희T"; break;
-                    case("국어") : teachers[i] = "김태철T"; break;
-                    case("플밍") : teachers[i] = "조혜연T"; break;
-                    case("진로") : teachers[i] = "담당T"; break;
-                    case("영A") : teachers[i] = "김지혜T"; break;
-                    case("정통") : teachers[i] = "김혁준T"; break;
-                    case("음악") : teachers[i] = "정다움T"; break;
-                    case("영어B") : teachers[i] = "전유원T"; break;
-                    case("컴그A") : teachers[i] = "하성봉T"; break;
-                    case("컴그B") : teachers[i] = "최보윤T"; break;
-                    case("과학") : teachers[i] = "김종수T"; break;
+                    case("역사") : teachers[i] = "박경수 선생님"; break;
+                    case("기제") : teachers[i] = "김상현 선생님"; break;
+                    case("사회") : teachers[i] = "이민주 선생님"; break;
+                    case("체육") : teachers[i] = "김성렬 선생님"; break;
+                    case("수2") : teachers[i] = "김세희 선생님"; break;
+                    case("국어") : teachers[i] = "김태철 선생님"; break;
+                    case("플밍") : teachers[i] = "조혜연 선생님"; break;
+                    case("진로") : teachers[i] = "담당선생님"; break;
+                    case("영A") : teachers[i] = "김지혜 선생님"; break;
+                    case("정통") : teachers[i] = "김혁준 선생님"; break;
+                    case("음악") : teachers[i] = "정다움 선생님"; break;
+                    case("영어B") : teachers[i] = "전유원 선생님"; break;
+                    case("컴그A") : teachers[i] = "하성봉 선생님"; break;
+                    case("컴그B") : teachers[i] = "최보윤 선생님"; break;
+                    case("과학") : teachers[i] = "김종수 선생님"; break;
                 }
             }
         }
@@ -238,22 +240,22 @@ public class TimeScheduleActivity extends AppCompatActivity {
         else {
             for(int i = 0; i < timeline.length; i++) {
                 switch (timeline[i]) {
-                    case("광고") : teachers[i] = "정희범T"; break;
-                    case("중국어") : teachers[i] = "정지훈T"; break;
-                    case("체육") : teachers[i] = "이재민T"; break;
-                    case("공수A") : teachers[i] = "김세희T"; break;
-                    case("문학") : teachers[i] = "허관무T"; break;
-                    case("자바") : teachers[i] = "이호선T"; break;
-                    case("진로") : teachers[i] = "담당T"; break;
-                    case("영A") : teachers[i] = "전유원T"; break;
-                    case("회계") : teachers[i] = "엄진영T"; break;
-                    case("음악") : teachers[i] = "정다움T"; break;
-                    case("영B") : teachers[i] = "양재덕T"; break;
-                    case("3D") : teachers[i] = "안수진T"; break;
-                    case("디자인") : teachers[i] = "하성봉T"; break;
-                    case("공업") : teachers[i] = "하미영T"; break;
-                    case("물리") : teachers[i] = "김상욱T"; break;
-                    case("화학") : teachers[i] = "김종수T"; break;
+                    case("광고") : teachers[i] = "정희범 선생님"; break;
+                    case("중국어") : teachers[i] = "정지훈 선생님"; break;
+                    case("체육") : teachers[i] = "이재민 선생님"; break;
+                    case("공수A") : teachers[i] = "김세희 선생님"; break;
+                    case("문학") : teachers[i] = "허관무 선생님"; break;
+                    case("자바") : teachers[i] = "이호선 선생님"; break;
+                    case("진로") : teachers[i] = "담당선생님"; break;
+                    case("영A") : teachers[i] = "전유원 선생님"; break;
+                    case("회계") : teachers[i] = "엄진영 선생님"; break;
+                    case("음악") : teachers[i] = "정다움 선생님"; break;
+                    case("영B") : teachers[i] = "양재덕 선생님"; break;
+                    case("3D") : teachers[i] = "안수진 선생님"; break;
+                    case("디자인") : teachers[i] = "하성봉 선생님"; break;
+                    case("공업") : teachers[i] = "하미영 선생님"; break;
+                    case("물리") : teachers[i] = "김상욱 선생님"; break;
+                    case("화학") : teachers[i] = "김종수 선생님"; break;
                 }
             }
         }

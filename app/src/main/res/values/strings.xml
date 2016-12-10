@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <resources>
-    <string name="app_name">Dimilife</string>
-    <string name="checktime">시간표 조회</string>
-    <string name="전교생_시간표_조회">전교생 시간표 조회</string>
-    <string name="bob_date">2016 년 12 월 10 일 아라코 식단표</string>
-    <string name="breakfast">아침식단넣어라아아아ㅏ</string>
-    <string name="lunch">점심식단넣어라ㅏ아아</string>
-    <string name="dinner">저녁식단넣어라아아아ㅏ</string>
-    <string name="snack">간식식단넣어라아아아아ㅏ</string>
-
-
+  <string name="app_name">Dimilife</string>
+  <string name="checktime">시간표 조회</string>
+  <string name="전교생_시간표_조회">전교생 시간표 조회</string>
+  <string name="bob_date">2016 년 12 월 10 일 아라코 식단표</string>
+  <string name="breakfast">아침식단넣어라아아아ㅏ</string>
+  <string name="lunch">점심식단넣어라ㅏ아아</string>
+  <string name="dinner">저녁식단넣어라아아아ㅏ</string>
+  <string name="snack">간식식단넣어라아아아아ㅏ</string>
 </resources>
 

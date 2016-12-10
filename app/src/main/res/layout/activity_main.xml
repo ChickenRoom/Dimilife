@@ -29,9 +29,10 @@
     </RelativeLayout>
 
     <LinearLayout
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_width="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:background="#FAFAFA">
 
         <ImageView
             android:layout_width="fill_parent"
@@ -52,17 +53,15 @@
             app:ci_gravity="right"
             android:paddingTop="23.62dp"
             android:paddingBottom="10dp"
-            android:paddingRight="23.96dp"
-            />
-
-        <android.support.v4.view.ViewPager
-            android:id="@+id/viewpager_default"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:paddingRight="23.96dp" />
 
 
     </LinearLayout>
 
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager_default"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
 
 
 </LinearLayout>

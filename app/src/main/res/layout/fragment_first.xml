@@ -17,6 +17,7 @@
             android:layout_gravity="right"
             android:gravity="right|center_vertical"
             android:layout_marginRight="17.5dp"
+            android:background="#FAFAFA"
             >
 
             <chickens.org.dimilife.Widget.NotoBoldButton
