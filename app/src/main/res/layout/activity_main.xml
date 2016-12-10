@@ -14,7 +14,6 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="432dp"
-            android:background="@drawable/dimigo"
             android:id="@+id/dimi_imageview" />
 
         <chickens.org.dimilife.Widget.NotoBoldTextView

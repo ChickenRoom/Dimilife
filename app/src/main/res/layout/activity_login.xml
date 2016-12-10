@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_login"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="chickens.org.dimilife.LoginActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:id="@+id/background"/>
 
 
     <RelativeLayout
@@ -36,6 +42,7 @@
     </RelativeLayout>
 
     <RelativeLayout
+        android:layout_below="@+id/relative"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/relative2">
@@ -92,4 +99,4 @@
 
 
 
-</LinearLayout>
+</RelativeLayout>

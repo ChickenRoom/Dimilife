@@ -1,6 +1,9 @@
 package chickens.org.dimilife.front;
 
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Color;
+import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Build;
@@ -12,6 +15,8 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.Toast;
 
 import InsideFragment.InsideFragmentFirst;
 import InsideFragment.InsideFragmentFourth;
@@ -29,6 +34,7 @@ InsideFragmentFirst.OnFragmentInteractionListener, InsideFragmentSecond.OnFragme
     Button alreadyBtn = null;
     FragmentManager fragmentManager;
     FragmentTransaction fragmentTransaction;
+    private long backKeyPressedTime = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +50,9 @@ InsideFragmentFirst.OnFragmentInteractionListener, InsideFragmentSecond.OnFragme
         if (Build.VERSION.SDK_INT >= 21) {   //상태바 색
             getWindow().setStatusBarColor(Color.parseColor("#000000"));
         }
+
+
+        putBitmap(R.id.dimi_imageview,R.drawable.dimigo,8);
 
 
         ViewPager viewPager = (ViewPager)findViewById(R.id.viewpager_default);
@@ -103,11 +112,53 @@ InsideFragmentFirst.OnFragmentInteractionListener, InsideFragmentSecond.OnFragme
 
     }
 
+    @Override
+    public void onBackPressed() {
+        if (System.currentTimeMillis() > backKeyPressedTime + 2000) {
+            backKeyPressedTime = System.currentTimeMillis();
+            Toast.makeText(this, "\'뒤로\'버튼을 한번 더 누르시면 종료됩니다.", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        if (System.currentTimeMillis() <= backKeyPressedTime + 2000) {
+            finish();
+        }
+        super.onBackPressed();
+    }
+
 
 
 
     @Override
     public void onFragmentInteraction(Uri uri) {
 
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        recycleView(R.id.dimi_imageview);
+    }
+
+    private void putBitmap(int imageViewId, int drawableId, int scale) {
+        ImageView imageView = (ImageView)findViewById(imageViewId);
+        BitmapFactory.Options options = new BitmapFactory.Options();
+        options.inSampleSize = scale;
+
+        imageView.setImageBitmap(BitmapFactory.decodeResource(getResources(), drawableId, options));
+    }
+
+    private void recycleView(int id) {
+        ImageView view = (ImageView)findViewById(id);
+
+        Drawable d = view.getDrawable();
+        if(d instanceof BitmapDrawable) {
+            Bitmap b = ((BitmapDrawable) d).getBitmap();
+            view.setImageBitmap(null);
+            b.recycle();
+            b = null;
+        }
+        d.setCallback(null);
+        System.gc();
+        Runtime.getRuntime().gc();
     }
 }

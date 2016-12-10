@@ -1,6 +1,7 @@
 package chickens.org.dimilife;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.graphics.drawable.BitmapDrawable;
@@ -12,6 +13,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -53,9 +55,7 @@ public class LoginActivity extends AppCompatActivity {
         id = (EditText)findViewById(R.id.id_edit);
         pw = (EditText)findViewById(R.id.pw_edit);
 
-        LinearLayout layout = (LinearLayout)findViewById(R.id.activity_login);
-
-        layout.setBackgroundDrawable(new BitmapDrawable(getResources(), BitmapFactory.decodeResource(getResources(), R.drawable.back)));
+        putBitmap(R.id.background, R.drawable.back, 8);
 
         button = (Button)findViewById(R.id.login);
         button.setOnClickListener(new View.OnClickListener() {
@@ -140,17 +140,29 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     public void onDestroy() {
         super.onDestroy();
-        recycleView(findViewById(R.id.activity_login));
+        recycleView(R.id.background);
     }
 
-    private void recycleView(View view) {
-        if(view != null) {
-            Drawable bg = view.getBackground();
-            if(bg != null) {
-                bg.setCallback(null);
-                ((BitmapDrawable)bg).getBitmap().recycle();
-                view.setBackgroundDrawable(null);
-            }
+    private void putBitmap(int imageViewId, int drawableId, int scale) {
+        ImageView imageView = (ImageView)findViewById(imageViewId);
+        BitmapFactory.Options options = new BitmapFactory.Options();
+        options.inSampleSize = scale;
+
+        imageView.setImageBitmap(BitmapFactory.decodeResource(getResources(), drawableId, options));
+    }
+
+    private void recycleView(int id) {
+        ImageView view = (ImageView)findViewById(id);
+
+        Drawable d = view.getDrawable();
+        if(d instanceof BitmapDrawable) {
+            Bitmap b = ((BitmapDrawable) d).getBitmap();
+            view.setImageBitmap(null);
+            b.recycle();
+            b = null;
         }
+        d.setCallback(null);
+        System.gc();
+        Runtime.getRuntime().gc();
     }
 }
