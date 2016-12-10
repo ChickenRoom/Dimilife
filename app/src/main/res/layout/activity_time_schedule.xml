@@ -110,7 +110,8 @@
                 android:gravity="center_vertical"
                 android:textAlignment="center"
                 android:textSize="20.0sp"
-                android:drawableStart="@drawable/searchs"/>
+                android:drawableStart="@drawable/searchs"
+                android:id="@+id/searchButton" />
 
             <ImageView
                 android:layout_width="20dp"

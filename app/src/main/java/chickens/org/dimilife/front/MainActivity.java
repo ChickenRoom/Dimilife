@@ -109,6 +109,7 @@ InsideFragmentFirst.OnFragmentInteractionListener, InsideFragmentSecond.OnFragme
 
             case R.id.month_tab:
                 InsideFragmentThird third = new InsideFragmentThird();
+                startActivity(new Intent(this,TimeScheduleActivity.class));
                 fragmentTransaction.replace(R.id.contents, third).addToBackStack(null).commit();
                 break;
             case R.id.borrow_tab:

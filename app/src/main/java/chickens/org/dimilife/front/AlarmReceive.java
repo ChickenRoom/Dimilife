@@ -30,8 +30,8 @@ public class AlarmReceive extends BroadcastReceiver {
                 | Intent.FLAG_ACTIVITY_SINGLE_TOP);//플레그부분은 옵션인데 나도 자세하게 몰르겠음
         PendingIntent pendingIntent = PendingIntent.getActivity(context, 0, intentActivity, PendingIntent.FLAG_UPDATE_CURRENT);
         String ticker = "ticker";//여긴 알림바에 등록될 글이랑 타이틀 적는곳.
-        String title = "title";
-        String text = "알림";
+        String title = "잔류 신청은 하셨나요?";
+        String text = "안했다면 어서 디미고인으로!";
         // Create Notification Object
 
         Notification.Builder builder = new Notification.Builder(context).setContentIntent(pendingIntent).setSmallIcon(android.R.drawable.ic_input_add).setContentTitle(title).setContentText(text)
