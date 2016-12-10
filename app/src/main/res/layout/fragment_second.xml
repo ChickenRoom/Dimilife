@@ -47,7 +47,8 @@
             android:gravity="center|center_vertical"
             android:text="@string/breakfast"
             android:textColor="#757575"
-            android:background="@drawable/lunchback"/>
+            android:background="@drawable/lunchback"
+            android:id="@+id/breakfast" />
 
         <chickens.org.dimilife.Widget.NotoBoldTextView
             android:layout_width="wrap_content"
@@ -71,7 +72,8 @@
             android:gravity="center|center_vertical"
             android:text="@string/lunch"
             android:textColor="#757575"
-            android:background="@drawable/lunchback"/>
+            android:background="@drawable/lunchback"
+            android:id="@+id/lunch" />
 
         <chickens.org.dimilife.Widget.NotoBoldTextView
             android:layout_width="wrap_content"
@@ -95,7 +97,8 @@
             android:gravity="center|center_vertical"
             android:text="@string/dinner"
             android:textColor="#757575"
-            android:background="@drawable/lunchback"/>
+            android:background="@drawable/lunchback"
+            android:id="@+id/dinner" />
 
         <chickens.org.dimilife.Widget.NotoBoldTextView
             android:layout_width="wrap_content"
@@ -118,7 +121,8 @@
             android:layout_gravity="center_horizontal"
             android:gravity="center|center_vertical"
             android:text="@string/snack"
-            android:background="@drawable/lunchback"/>
+            android:background="@drawable/lunchback"
+            android:id="@+id/snack" />
 
 
 

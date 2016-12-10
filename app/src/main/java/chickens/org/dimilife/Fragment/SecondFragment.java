@@ -7,8 +7,16 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
+import chickens.org.dimilife.HTTPConnection.Food;
+import chickens.org.dimilife.HTTPConnection.FoodService;
 import chickens.org.dimilife.R;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -29,6 +37,8 @@ public class SecondFragment extends Fragment {
     private String mParam2;
 
     private OnFragmentInteractionListener mListener;
+
+    private TextView breakfast,lunch,dinner,snack;
 
     public SecondFragment() {
         // Required empty public constructor
@@ -66,6 +76,13 @@ public class SecondFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_second, container, false);
+        breakfast = (TextView)view.findViewById(R.id.breakfast);
+        lunch = (TextView)view.findViewById(R.id.lunch);
+        dinner = (TextView)view.findViewById(R.id.dinner);
+        snack = (TextView)view.findViewById(R.id.snack);
+        getFood();
+
+
         return view;
     }
 
@@ -106,5 +123,31 @@ public class SecondFragment extends Fragment {
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
+    }
+
+    private void getFood() {
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl("http://dimigo.in/")
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+
+        final FoodService getFood = retrofit.create(FoodService.class);
+
+        Call<Food> call = getFood.getFood();
+
+        call.enqueue(new Callback<Food>() {
+            @Override
+            public void onResponse(Call<Food> call, Response<Food> response) {
+                breakfast.setText(response.body().getBreakfast());
+                lunch.setText(response.body().getLunch());
+                dinner.setText(response.body().getDinner());
+                snack.setText(response.body().getSnack());
+            }
+
+            @Override
+            public void onFailure(Call<Food> call, Throwable t) {
+
+            }
+        });
     }
 }

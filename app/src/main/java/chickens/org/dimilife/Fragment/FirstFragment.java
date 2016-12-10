@@ -123,26 +123,5 @@ public class FirstFragment extends Fragment {
         void onFragmentInteraction(Uri uri);
     }
 
-    private void getFood() {
-        Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://dimigo.in/")
-                .addConverterFactory(GsonConverterFactory.create())
-                .build();
 
-        final FoodService getFood = retrofit.create(FoodService.class);
-
-        Call<Food> call = getFood.getFood();
-
-        call.enqueue(new Callback<Food>() {
-            @Override
-            public void onResponse(Call<Food> call, Response<Food> response) {
-                textView.setText(response.body().getBreakfast());
-            }
-
-            @Override
-            public void onFailure(Call<Food> call, Throwable t) {
-
-            }
-        });
-    }
 }
