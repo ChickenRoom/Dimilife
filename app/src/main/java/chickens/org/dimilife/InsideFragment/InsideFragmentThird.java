@@ -1,4 +1,4 @@
-package InsideFragment;
+package chickens.org.dimilife.InsideFragment;
 
 import android.content.Context;
 import android.net.Uri;
@@ -13,12 +13,12 @@ import chickens.org.dimilife.R;
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link InsideFragmentFourth.OnFragmentInteractionListener} interface
+ * {@link InsideFragmentThird.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link InsideFragmentFourth#newInstance} factory method to
+ * Use the {@link InsideFragmentThird#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class InsideFragmentFourth extends Fragment {
+public class InsideFragmentThird extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -30,7 +30,7 @@ public class InsideFragmentFourth extends Fragment {
 
     private OnFragmentInteractionListener mListener;
 
-    public InsideFragmentFourth() {
+    public InsideFragmentThird() {
         // Required empty public constructor
     }
 
@@ -40,11 +40,11 @@ public class InsideFragmentFourth extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment InsideFragmentFourth.
+     * @return A new instance of fragment InsideFragmentThird.
      */
     // TODO: Rename and change types and number of parameters
-    public static InsideFragmentFourth newInstance(String param1, String param2) {
-        InsideFragmentFourth fragment = new InsideFragmentFourth();
+    public static InsideFragmentThird newInstance(String param1, String param2) {
+        InsideFragmentThird fragment = new InsideFragmentThird();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -65,7 +65,7 @@ public class InsideFragmentFourth extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_inside_fourth, container, false);
+        return inflater.inflate(R.layout.fragment_inside_third, container, false);
     }
 
     // TODO: Rename method, update argument and hook method into UI event
