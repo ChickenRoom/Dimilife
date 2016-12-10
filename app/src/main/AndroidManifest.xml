@@ -36,6 +36,13 @@
 
 
         </activity>
+
+        <receiver
+            android:name=".front.AlarmReceive">
+            <intent-filter>
+                <action android:name="com.example.android.receivers.AlarmReceiver" />
+            </intent-filter>
+        </receiver>
     </application>
 
 

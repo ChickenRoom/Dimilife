@@ -1,5 +1,9 @@
 package chickens.org.dimilife.front;
 
+import android.app.AlarmManager;
+import android.app.PendingIntent;
+import android.content.Context;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
@@ -13,10 +17,13 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
+
+import java.util.Calendar;
 
 import chickens.org.dimilife.InsideFragment.InsideFragmentFirst;
 import chickens.org.dimilife.InsideFragment.InsideFragmentFourth;
@@ -61,6 +68,8 @@ InsideFragmentFirst.OnFragmentInteractionListener, InsideFragmentSecond.OnFragme
         viewPager.setAdapter(adapter);
         indicator.setViewPager(viewPager);
         adapter.registerDataSetObserver(indicator.getDataSetObserver());
+
+        alarm_on();
 
 
 
@@ -160,5 +169,27 @@ InsideFragmentFirst.OnFragmentInteractionListener, InsideFragmentSecond.OnFragme
         d.setCallback(null);
         System.gc();
         Runtime.getRuntime().gc();
+    }
+
+    public void alarm_on(){
+        // 알람 등록하기
+        Log.i("alarm", "setAlarm");
+        AlarmManager am = (AlarmManager)getSystemService(Context.ALARM_SERVICE);
+        Intent intent = new Intent(this, AlarmReceive.class);   //AlarmReceive.class이클레스는 따로 만들꺼임 알람이 발동될때 동작하는 클레이스임
+
+        PendingIntent sender = PendingIntent.getBroadcast(this, 0, intent, 0);
+
+        Calendar calendar = Calendar.getInstance();
+        //알람시간 calendar에 set해주기
+
+        //시간을 11시 28분으로 일단 set했음
+        calendar.set(Calendar.DAY_OF_WEEK,2);
+        calendar.set(Calendar.HOUR_OF_DAY,20);
+        calendar.set(Calendar.MINUTE,0);
+        calendar.set(Calendar.SECOND, 0);
+
+        //알람 예약
+        //am.set(AlarmManager.RTC, calendar.getTimeInMillis(), sender);//이건 한번 알람
+        am.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), 24*60*60*1000*7, sender);//이건 여러번 알람 24*60*60*1000 이건 일주일에한번 계속 알람한다는 뜻.
     }
 }
