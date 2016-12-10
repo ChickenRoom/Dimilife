@@ -78,8 +78,10 @@ public class FirstFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_first, container, false);
 
 
+
         return view;
     }
+
 
 
     // TODO: Rename method, update argument and hook method into UI event

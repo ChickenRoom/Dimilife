@@ -7,71 +7,83 @@
 
     <!-- TODO: Update blank fragment layout -->
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="60dp"
-        android:orientation="horizontal"
-        android:layout_gravity="right"
-        android:gravity="right|center_vertical"
-        android:layout_marginRight="17.5dp"
-        >
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-        <chickens.org.dimilife.Widget.NotoBoldButton
-            android:id="@+id/day_tab"
+        <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="60dp"
+            android:layout_gravity="right"
+            android:gravity="right|center_vertical"
+            android:layout_marginRight="17.5dp"
+            >
 
-            android:drawableStart="@drawable/ic_event_note_unselected_24dp"
-            android:drawablePadding="2.5dp"
-            android:textAlignment="viewStart"
-            android:text="일간"
-            android:textColor="@color/buttonUnSelected"
-            android:background="?android:attr/selectableItemBackground"
-            android:onClick="onClickTab"
-            android:padding="@dimen/activity_vertical_margin"
-            />
-        <chickens.org.dimilife.Widget.NotoBoldButton
-            android:id="@+id/week_tab"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:drawableStart="@drawable/ic_event_note_unselected_24dp"
-            android:textAlignment="viewStart"
-            android:text="주간"
-            android:drawablePadding="2.5dp"
-            android:textColor="@color/buttonUnSelected"
-            android:background="?android:attr/selectableItemBackground"
-            android:onClick="onClickTab"
-            android:padding="@dimen/activity_vertical_margin"
-            />
-        <chickens.org.dimilife.Widget.NotoBoldButton
-            android:id="@+id/month_tab"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:drawableStart="@drawable/ic_event_note_unselected_24dp"
-            android:drawablePadding="2.5dp"
-            android:textAlignment="viewStart"
-            android:text="전체"
-            android:textColor="@color/buttonUnSelected"
-            android:background="?android:attr/selectableItemBackground"
-            android:onClick="onClickTab"
-            android:padding="@dimen/activity_vertical_margin"
-            />
-        <chickens.org.dimilife.Widget.NotoBoldButton
-            android:id="@+id/borrow_tab"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:drawableStart="@drawable/ic_event_note_unselected_24dp"
-            android:drawablePadding="2.5dp"
-            android:textAlignment="viewStart"
-            android:text="빌리기"
-            android:textColor="@color/buttonUnSelected"
-            android:background="?android:attr/selectableItemBackground"
-            android:onClick="onClickTab"
-            android:padding="@dimen/activity_vertical_margin"
-            />
+            <chickens.org.dimilife.Widget.NotoBoldButton
+                android:id="@+id/day_tab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:drawableStart="@drawable/ic_event_note_unselected_24dp"
+                android:drawablePadding="2.5dp"
+                android:textAlignment="viewStart"
+                android:text="일간"
+                android:textColor="@color/buttonUnSelected"
+                android:background="?android:attr/selectableItemBackground"
+                android:onClick="onClickTab"
+                android:padding="@dimen/activity_vertical_margin"
+                />
+            <chickens.org.dimilife.Widget.NotoBoldButton
+                android:id="@+id/week_tab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_event_note_unselected_24dp"
+                android:textAlignment="viewStart"
+                android:text="주간"
+                android:drawablePadding="2.5dp"
+                android:textColor="@color/buttonUnSelected"
+                android:background="?android:attr/selectableItemBackground"
+                android:onClick="onClickTab"
+                android:padding="@dimen/activity_vertical_margin"
+                />
+            <chickens.org.dimilife.Widget.NotoBoldButton
+                android:id="@+id/month_tab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_event_note_unselected_24dp"
+                android:drawablePadding="2.5dp"
+                android:textAlignment="viewStart"
+                android:text="전체"
+                android:textColor="@color/buttonUnSelected"
+                android:background="?android:attr/selectableItemBackground"
+                android:onClick="onClickTab"
+                android:padding="@dimen/activity_vertical_margin"
+                />
+            <chickens.org.dimilife.Widget.NotoBoldButton
+                android:id="@+id/borrow_tab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_event_note_unselected_24dp"
+                android:drawablePadding="2.5dp"
+                android:textAlignment="viewStart"
+                android:text="빌리기"
+                android:textColor="@color/buttonUnSelected"
+                android:background="?android:attr/selectableItemBackground"
+                android:onClick="onClickTab"
+                android:padding="@dimen/activity_vertical_margin"
+                />
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/contents"
+            android:layout_width="match_parent"
+            android:layout_height="483.44dp"
+            android:orientation="horizontal">
 
 
+
+        </FrameLayout>
 
     </LinearLayout>
-
 
 </FrameLayout>

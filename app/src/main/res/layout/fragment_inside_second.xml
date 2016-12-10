@@ -2,12 +2,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="InsideFragment.InsideFragmentSecond">
+    tools:context="InsideFragment.InsideFragmentFirst">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <android.support.v4.view.ViewPager
+        android:id="@+id/inside_viewpager_default"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="483.44dp"
+        android:layout_gravity="bottom"
+        />
+    <chickens.org.dimilife.Widget.NotoBoldTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="asdfasdf"/>
 
 </FrameLayout>
