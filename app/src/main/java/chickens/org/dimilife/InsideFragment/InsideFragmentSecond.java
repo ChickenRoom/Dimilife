@@ -1,4 +1,4 @@
-package InsideFragment;
+package chickens.org.dimilife.InsideFragment;
 
 import android.content.Context;
 import android.net.Uri;

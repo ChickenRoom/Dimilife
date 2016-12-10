@@ -18,10 +18,10 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import InsideFragment.InsideFragmentFirst;
-import InsideFragment.InsideFragmentFourth;
-import InsideFragment.InsideFragmentSecond;
-import InsideFragment.InsideFragmentThird;
+import chickens.org.dimilife.InsideFragment.InsideFragmentFirst;
+import chickens.org.dimilife.InsideFragment.InsideFragmentFourth;
+import chickens.org.dimilife.InsideFragment.InsideFragmentSecond;
+import chickens.org.dimilife.InsideFragment.InsideFragmentThird;
 import chickens.org.dimilife.Fragment.FirstFragment;
 import chickens.org.dimilife.Fragment.SecondFragment;
 import chickens.org.dimilife.Fragment.ThirdFragment;
