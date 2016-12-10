@@ -10,6 +10,7 @@ import android.os.Build;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -97,6 +98,7 @@ public class LoginActivity extends AppCompatActivity {
         call.enqueue(new Callback<Users>() {
             @Override
             public void onResponse(Call<Users> call, Response<Users> response) {
+                Log.e("serial",String.valueOf(response.body().getSerial()));
                 UserManager.getInstance().setSerial(response.body().getSerial());
             }
 
