@@ -10,7 +10,7 @@ public class ScheduleManage {
     private String[] one_one_thu = {};
     private String[] one_one_fri = {};
 
-    private String[] one_two_mon = {"역사","사회","체육","수2","국1","플밍","진로"};
+    private String[] one_two_mon = {"역사","사회","체육","수2","국어","플밍","진로"};
     private String[] one_two_tue = {"영A","국어","진로","사회","미술","미술","창체"};
     private String[] one_two_wed = {"사회","플밍","그B","과학","상경","역사","자습"};
     private String[] one_two_thu = {"상경","영B","그A","그A","수2","체육","동아리"};
@@ -41,10 +41,10 @@ public class ScheduleManage {
     private String[] one_six_fri = {"역사","국어","체육","컴그A","영B","정통","기제"};
 
     private String[] two_one_mon = {"체욱","3D","3D","영A","회계","음악","음악"};
-    private String[] two_one_tue = {"디자인","영어B","체육,","수학","진로","문학","창체"};
+    private String[] two_one_tue = {"디자인","영B","체육,","수학","진로","문학","창체"};
     private String[] two_one_wed = {"수학","진로","디자인","중국어","문학","3D","자습"};
     private String[] two_one_thu = {"수학","진로","광고","광고","회계","디자인","동아리"};
-    private String[] two_one_fri = {"음악","음악","광고","광고","중국어","회계","영"};
+    private String[] two_one_fri = {"음악","음악","광고","광고","중국어","회계","영A"};
 
     private String[] two_two_mon = {"디자인","회계","음악","음악","광고","광고","문학"};
     private String[] two_two_tue = {"체육","음악","음악","3D","영B","디자인","창체"};
