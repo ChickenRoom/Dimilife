@@ -6,15 +6,122 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="543.44dp">
+        android:layout_height="543.44dp"
+
+        android:orientation="vertical">
 
         <chickens.org.dimilife.Widget.NotoRegularTextView
+            android:layout_width="match_parent"
+            android:layout_height="46.12dp"
+            android:layout_gravity="center_vertical"
+            android:text="@string/bob_date"
+            android:textSize="25dp"
+            android:gravity="center"
+            android:textColor="#757575"
+            />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1.3dp"
+            android:background="@drawable/line"
+            android:layout_marginBottom="14.5dp"
+            />
+
+        <chickens.org.dimilife.Widget.NotoBoldTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
-            android:text="@string/breakfast"
-            android:textSize="20dp"
+            android:gravity="center_vertical"
+            android:drawableStart="@drawable/ic_local_florist_black_24dp"
+            android:drawablePadding="1.5dp"
+            android:textColor="@color/buttonSelected"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="37dp"
+            android:text="아침"
+            android:textSize="17dp"
             />
+        <chickens.org.dimilife.Widget.NotoRegularTextView
+            android:layout_width="693dp"
+            android:layout_height="55dp"
+            android:paddingLeft="20dp"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center|center_vertical"
+            android:text="@string/breakfast"
+            android:textColor="#757575"
+            android:background="@drawable/lunchback"/>
+
+        <chickens.org.dimilife.Widget.NotoBoldTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:drawableStart="@drawable/ic_local_florist_black_24dp"
+            android:drawablePadding="1.5dp"
+            android:textColor="@color/buttonSelected"
+            android:layout_marginTop="12.5dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="37dp"
+            android:text="점심"
+            android:textSize="17dp"
+
+            />
+        <chickens.org.dimilife.Widget.NotoRegularTextView
+            android:layout_width="693dp"
+            android:layout_height="55dp"
+            android:paddingLeft="20dp"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center|center_vertical"
+            android:text="@string/lunch"
+            android:textColor="#757575"
+            android:background="@drawable/lunchback"/>
+
+        <chickens.org.dimilife.Widget.NotoBoldTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:drawableStart="@drawable/ic_local_florist_black_24dp"
+            android:drawablePadding="1.5dp"
+            android:textColor="@color/buttonSelected"
+            android:layout_marginTop="12.5dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="37dp"
+            android:text="저녁"
+            android:textSize="17dp"
+
+            />
+        <chickens.org.dimilife.Widget.NotoRegularTextView
+            android:layout_width="693dp"
+            android:layout_height="55dp"
+            android:paddingLeft="20dp"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center|center_vertical"
+            android:text="@string/dinner"
+            android:textColor="#757575"
+            android:background="@drawable/lunchback"/>
+
+        <chickens.org.dimilife.Widget.NotoBoldTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:drawableStart="@drawable/ic_local_florist_black_24dp"
+            android:drawablePadding="1.5dp"
+            android:textColor="@color/buttonSelected"
+            android:layout_marginTop="12.5dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="37dp"
+            android:text="간식"
+            android:textSize="17dp"
+
+            />
+        <chickens.org.dimilife.Widget.NotoRegularTextView
+            android:layout_width="693dp"
+            android:layout_height="55dp"
+            android:paddingLeft="20dp"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center|center_vertical"
+            android:text="@string/snack"
+            android:background="@drawable/lunchback"/>
+
+
+
 
 
     </LinearLayout>
