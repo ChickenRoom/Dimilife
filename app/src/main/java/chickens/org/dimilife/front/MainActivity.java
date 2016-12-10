@@ -83,14 +83,14 @@ InsideFragmentFirst.OnFragmentInteractionListener, InsideFragmentSecond.OnFragme
         Drawable ic;
         if(alreadyBtn != null){
             alreadyBtn.setTextColor(getResources().getColor(R.color.buttonUnSelected));
-            ic = getDrawable(R.drawable.ic_event_note_unselected_24dp);
+            ic =  getDrawable(alreadyBtn == (Button) v.findViewById(R.id.borrow_tab) ? R.drawable.ic_access_time_unselected_24dp : R.drawable.ic_event_note_unselected_24dp);
             alreadyBtn.setCompoundDrawablesWithIntrinsicBounds(ic, null, null, null);
         }
 
         Button newBtn = (Button) v.findViewById(v.getId());
 
         newBtn.setTextColor(getResources().getColor(R.color.buttonSelected));
-        ic = getDrawable(R.drawable.ic_event_note_selected_24dp);
+        ic = getDrawable(newBtn == (Button) v.findViewById(R.id.borrow_tab) ? R.drawable.ic_access_time_selected_24dp : R.drawable.ic_event_note_selected_24dp);
         newBtn.setCompoundDrawablesWithIntrinsicBounds(ic, null, null, null);
         alreadyBtn = newBtn;
 

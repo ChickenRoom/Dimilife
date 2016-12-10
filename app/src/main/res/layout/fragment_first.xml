@@ -63,7 +63,7 @@
                 android:id="@+id/borrow_tab"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:drawableStart="@drawable/ic_event_note_unselected_24dp"
+                android:drawableStart="@drawable/ic_access_time_unselected_24dp"
                 android:drawablePadding="2.5dp"
                 android:textAlignment="viewStart"
                 android:text="빌리기"
