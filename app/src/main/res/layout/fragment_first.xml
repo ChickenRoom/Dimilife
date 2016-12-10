@@ -74,16 +74,15 @@
                 />
         </LinearLayout>
 
-        <LinearLayout
+        <FrameLayout
+            android:id="@+id/contents"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-            <android.support.v4.view.ViewPager
-                android:id="@+id/inside_viewpager_default"
-                android:layout_width="match_parent"
-                android:layout_height="483.44dp"
-                android:layout_gravity="bottom"
-                />
-        </LinearLayout>
+            android:layout_height="483.44dp"
+            android:orientation="horizontal">
+
+
+
+        </FrameLayout>
 
     </LinearLayout>
 
