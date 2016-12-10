@@ -5,6 +5,24 @@ package chickens.org.dimilife;
  */
 public class UserManager {
     private int serial;
+    private int isSnack;
+    private int isStay;
+
+    public int getIsStay() {
+        return isStay;
+    }
+
+    public void setIsStay(int isStay) {
+        this.isStay = isStay;
+    }
+
+    public int getIsSnack() {
+        return isSnack;
+    }
+
+    public void setIsSnack(int isSnack) {
+        this.isSnack = isSnack;
+    }
 
     public int getSerial() {
         return serial;

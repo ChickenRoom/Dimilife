@@ -117,10 +117,10 @@ public class LoginActivity extends AppCompatActivity {
                     stayList.add(response.body().get(i).getName());
                 }
                 if(stayList.contains(name)) {
-
+                    UserManager.getInstance().setIsStay(1);
                 }
                 else {
-
+                    UserManager.getInstance().setIsStay(0);
                 }
             }
 
@@ -141,10 +141,10 @@ public class LoginActivity extends AppCompatActivity {
                     snackList.add(response.body().get(i).getName());
                 }
                 if(snackList.contains(name)) {
-
+                    UserManager.getInstance().setIsSnack(1);
                 }
                 else {
-
+                    UserManager.getInstance().setIsSnack(0);
                 }
             }
 
