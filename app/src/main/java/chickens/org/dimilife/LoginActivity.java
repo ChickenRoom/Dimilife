@@ -20,6 +20,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
+import chickens.org.dimilife.HTTPConnection.GetUserInfo;
 import chickens.org.dimilife.HTTPConnection.LoginService;
 import chickens.org.dimilife.HTTPConnection.ServiceGenerator;
 import chickens.org.dimilife.HTTPConnection.Snack;
@@ -27,6 +28,7 @@ import chickens.org.dimilife.HTTPConnection.SnackService;
 import chickens.org.dimilife.HTTPConnection.Stay;
 import chickens.org.dimilife.HTTPConnection.StayService;
 import chickens.org.dimilife.HTTPConnection.User;
+import chickens.org.dimilife.HTTPConnection.Users;
 import chickens.org.dimilife.front.MainActivity;
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -75,7 +77,7 @@ public class LoginActivity extends AppCompatActivity {
         call.enqueue(new Callback<User>() {
             @Override
             public void onResponse(Call<User> call, Response<User> response) {
-                name = response.body().getName();
+                getSerial(response.body().getUsername());
                 getStay("2016-06-18");
                 getSnack(2016,5);
                 startActivity(new Intent(LoginActivity.this, MainActivity.class));
@@ -84,6 +86,22 @@ public class LoginActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<User> call, Throwable t) {
+                t.printStackTrace();
+            }
+        });
+    }
+
+    private void getSerial(String username) {
+        GetUserInfo getUserInfo = ServiceGenerator.createService(GetUserInfo.class,"enoxaiming","hkwoo3");
+        Call<Users> call = getUserInfo.getUsers(username);
+        call.enqueue(new Callback<Users>() {
+            @Override
+            public void onResponse(Call<Users> call, Response<Users> response) {
+                UserManager.getInstance().setSerial(response.body().getSerial());
+            }
+
+            @Override
+            public void onFailure(Call<Users> call, Throwable t) {
                 t.printStackTrace();
             }
         });

@@ -7,5 +7,10 @@ import java.util.ArrayList;
  */
 
 public class ManageSchedule {
+    String[] one_one_mon = {};
+    String[] one_one_tue = {};
+    String[] one_one_wed = {};
+    String[] one_one_thu = {};
+    String[] one_one_fri = {};
 
 }
